@@ -1,0 +1,2 @@
+# linux-s
+shell script
