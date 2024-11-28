@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Edit Details</title>
+	</head>
+<style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: pink;
+        }
+	.centered-div {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background: linear-gradient(45deg, #ffcc00, #ff6699, #66ccff);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: colorChange 10s infinite;
+        }
+
+       
+    </style>
+
+	<body>
+		<div>
+			<h1> Edit Details </h1>
+			<form action="/edit" method="POST">
+
+				<label for="user_id">User Id to Change </label>
+				<input type="text" id="user_id" name="user_id" required></br>
+				
+				<p>Choose one option to edit :- </p>
+				<input type="radio" id="name" name="name" value="name">
+				<label for="age1">Name</label><br>
+
+				<input type="radio" id="age" name="name" value="age">
+				<label for="age2">Age</label><br>
+  
+				<input type="radio" id="address" name="name" value="add">
+				<label for="age3">Address</label><br>
+				
+				<input type="radio" id="qual" name="name" value="qual">
+				<label for="age1">Qualification</label><br><br>
+
+				<label for="entry">New Detail</label>
+				<input type="text" id="entry" name="entry" required></br>
+				
+				<p> Note: UserId cannot be edited </p>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+	</body>
+</html>
+
+

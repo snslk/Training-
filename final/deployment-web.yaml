@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: postgres
+ labels:
+  app: pgsql
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+   app: pgsql
+ template:
+  metadata: 
+   name: pgsql
+   labels:
+    app: pgsql
+    type: database
+  spec:
+   containers:
+   - name: pgsql
+     image: snhpf9/sql:latest
+     imagePullPolicy: Always
+     ports:
+     - containerPort: 5432
+   restartPolicy: Never

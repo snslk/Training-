@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+ POSTGRES_PASSWORD: 1234s
+ POSTGRES_HOST: pgsql-service
+ POSTGRES_USER: postgres 
